@@ -99,6 +99,8 @@ ul {
 
 .band-members__item {
     opacity: 0.5;
+    width: auto;
+    height: auto;
 }
 
 .band-members__item:nth-of-type(1) {
@@ -111,6 +113,11 @@ ul {
 
 .band-members__desc.active {
     display: block;
+}
+
+.band-members__image {
+    width: auto;
+    height: auto;
 }
 
 .page-navigation__item a {
@@ -211,6 +218,7 @@ i {
     width: 900px;
     margin-left: calc(67% - 450px);
     margin-top: 40px;
+    flex-direction: row;
 
 }
 
@@ -273,7 +281,7 @@ i {
 }
 
 iframe {
-    width: 59%;
+    width: 57%;
     margin-right: 50px;
     margin-top: 40px;
     border-top: 5px solid #EF008E;
@@ -283,16 +291,30 @@ iframe {
 
 /*galeria*/
 
+@supports (display: grid) {
+    .gallery {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 500px;
+        column-gap: 15px;
+        margin-left: 600px;
+
+    }
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     width: 60%;
-    margin-left: 560px;
+    margin-left: 580px;
     justify-content: space-around;
 }
 
+
 .gallery__image {
-    width: 280px;
+    width: 260px;
     border-top: 5px solid #EF008E;
     margin-top: 20px;
 }
@@ -301,6 +323,7 @@ iframe {
 
 .contact__image {
     margin: 100px calc(50% - 210px);
+    width: auto;
 }
 
 .form {
@@ -348,4 +371,222 @@ address {
 .form__field .button {
     margin-top: 20px;
     width: 120px;
+}
+
+/*media dla 360x640*/
+
+@media (max-width: 360px) {
+
+    .page-header {
+        top: 30px;
+        left: 30px;
+        position: absolute;
+    }
+
+    .page-footer {
+        bottom: 10px;
+        left: 30px;
+    }
+
+    /*headerpage*/
+
+
+    .logo {
+        position: absolute;
+        left: 150px;
+    }
+
+    .band-members {
+        left: 0px;
+        top: 210px;
+    }
+
+    .band-members__image {
+        width: 150px;
+        height: auto;
+    }
+
+    .band-members__name {
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .band-members__desc {
+        font-size: 11px;
+        text-align: right;
+    }
+
+    .band-members__item {
+        width: 270px;
+    }
+
+    .page-navigation__item a {
+        font-size: 10px;
+    }
+
+    .page-navigation {
+        margin-top: 0px;
+    }
+
+    /*social links*/
+
+    .social-links__link {
+        display: block;
+        padding-top: 20px;
+    }
+
+    i {
+        font-size: 18px;
+        color: #EF008E;
+    }
+
+    /*About*/
+
+    .about-section {
+        min-height: 150vh;
+        height: auto;
+    }
+
+    .about-section__desc {
+        width: 255px;
+        height: auto;
+        left: 21%;
+        bottom: 12%;
+    }
+
+    .about-section__desc-header {
+        font-size: 13px;
+        padding: 40px 50px 20px;
+    }
+
+    .about-section__desc-details {
+        font-size: 11px;
+        margin-top: -15%;
+    }
+
+    .content-section.about-section img {
+        margin-right: 30px;
+        margin-top: 40px;
+        width: 70%;
+    }
+
+    .content-section__header {
+        font-size: 28px;
+        margin: -50px 30px 10px;
+    }
+
+    /*concerts*/
+
+    .concerts {
+        width: 300px;
+        margin-left: 5px;
+        margin-top: 40px;
+        flex-direction: column;
+    }
+
+    .concerts__image {
+        width: 250px;
+    }
+
+    .concerts__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .infotime {
+        padding: 0 50px;
+        text-align: left;
+    }
+
+    .concerts__date {
+        font-size: 13px;
+        text-align: right;
+    }
+
+    .concerts__location {
+        font-size: 11px;
+        text-align: right;
+    }
+
+    .button {
+        font-size: 11px;
+    }
+
+    iframe {
+        width: 70%;
+        margin-right: 34px;
+        margin-top: 40px;
+        height: 250px;
+    }
+
+    #video {
+        min-height: 80vh;
+        margin-top: 70px;
+    }
+
+
+    /*galeria*/
+
+
+    @supports (display: grid) {
+        .gallery {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            width: 250px;
+            column-gap: 15px;
+            margin-left: 70px;
+
+        }
+    }
+
+    .gallery {
+        flex-direction: column;
+        width: 20%;
+        margin-left: 165px;
+    }
+
+
+    .gallery__image {
+        width: 250px;
+        margin-top: 50px;
+    }
+
+    /*contact*/
+
+    #contact {
+        margin-top: 60px;
+    }
+
+    .contact__image {
+        margin: 70px calc(50% - 150px);
+        width: 70%;
+    }
+
+    .form {
+        margin: 70px 0px 0px 300px;
+        padding-bottom: 100px;
+
+    }
+
+    .form__input {
+        height: 30px;
+        width: 250px;
+        margin-top: 40px;
+    }
+
+    .form__field {
+        display: flex;
+        margin-left: -220px;
+        font-size: 11px;
+    }
+
+    address {
+        left: 22%;
+        bottom: 45%;
+    }
+
+    .form__field .button {
+        margin-top: 40px;
+    }
 }
