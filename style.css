@@ -165,7 +165,7 @@ i {
     width: 400px;
     height: 400px;
     position: absolute;
-    left: 26.6%;
+    left: 26.5%;
     bottom: -2%;
     border-bottom: 5px solid #EF008E;
 }
@@ -368,14 +368,44 @@ address {
     margin-top: 10px;
 }
 
-.form__field .button {
+.form__field button {
     margin-top: 20px;
     width: 120px;
+}
+
+.buttoncontact {
+    text-transform: uppercase;
+    border: none;
+    color: #CCC8FF;
+    opacity: .8;
+    background-color: #372046;
+    font-weight: 550;
+    letter-spacing: 1.6px;
+    font-size: 12px;
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 12px;
+    width: 110px;
 }
 
 /*media dla 360x640*/
 
 @media (max-width: 360px) {
+
+    .page-navigation__items {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #toggle-bar {
+        font-size: 40px;
+        margin-top: -10px;
+        margin-left: -10px;
+        cursor: pointer;
+    }
 
     .page-header {
         top: 30px;
@@ -390,6 +420,13 @@ address {
 
     /*headerpage*/
 
+    main {
+        max-width: 360px;
+    }
+
+    #home {
+        max-width: 360px;
+    }
 
     .logo {
         position: absolute;
@@ -399,6 +436,7 @@ address {
     .band-members {
         left: 0px;
         top: 210px;
+
     }
 
     .band-members__image {
@@ -510,6 +548,7 @@ address {
 
     .button {
         font-size: 11px;
+        display: block;
     }
 
     iframe {
@@ -523,6 +562,19 @@ address {
         min-height: 80vh;
         margin-top: 70px;
     }
+
+    .ticket {
+        background-color: transparent;
+        font-weight: 550;
+        letter-spacing: 1.6px;
+        font-size: 12px;
+        border-radius: 5px;
+        height: 30px;
+        margin-top: 12px;
+        width: 110px;
+    }
+
+
 
 
     /*galeria*/
@@ -588,5 +640,17 @@ address {
 
     .form__field .button {
         margin-top: 40px;
+        text-transform: uppercase;
+        border: none;
+        color: #CCC8FF;
+        opacity: .8;
+        background-color: #372046;
+        font-weight: 550;
+        letter-spacing: 1.6px;
+        font-size: 12px;
+        border-radius: 5px;
+        height: 30px;
+        margin-top: 12px;
+        width: 110px;
     }
 }
