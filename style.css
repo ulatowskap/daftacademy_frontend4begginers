@@ -388,6 +388,21 @@ address {
     width: 110px;
 }
 
+.ticket {
+    background-color: transparent;
+    font-weight: 550;
+    letter-spacing: 1.6px;
+    font-size: 12px;
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 12px;
+    width: 110px;
+}
+
+.toggle-bar {
+    display: none;
+}
+
 /*media dla 360x640*/
 
 @media (max-width: 360px) {
@@ -401,6 +416,7 @@ address {
     }
 
     #toggle-bar {
+        display: block;
         font-size: 40px;
         margin-top: -10px;
         margin-left: -10px;
