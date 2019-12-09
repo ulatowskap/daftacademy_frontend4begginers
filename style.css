@@ -399,7 +399,7 @@ address {
     width: 110px;
 }
 
-.toggle-bar {
+.toggle-menu {
     display: none;
 }
 
@@ -409,6 +409,10 @@ address {
 
     .page-navigation__items {
         display: none;
+    }
+
+    .toggle-menu {
+        display: block;
     }
 
     .hamburger {
